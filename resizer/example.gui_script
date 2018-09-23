@@ -1,0 +1,28 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	self.resize_node = gui.get_node("resize_node")
+	local os = sys.get_sys_info().system_name
+	if os == "Android" or os == "iPhone OS" then
+		msg.post(".", "disable")
+	end	
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("right_click") and action.released and gui.pick_node(self.resize_node, action.x, action.y)then
+		mnu.begin()
+		mnu.label(1, true, "1280x720")
+		mnu.label(2, true, "1280x592")
+		mnu.label(3, true, "1280x960")
+	
+		mnu.finish()
+		local _, _, _, h = defos.get_view_size()
+		local result = mnu.show(action.screen_x, h - action.screen_y)
+		if result == 1 then
+			defos.set_view_size(nil, nil, 1280, 720)
+		elseif result == 2 then
+			defos.set_view_size(nil, nil, 1280, 592)
+		elseif result == 3 then
+			defos.set_view_size(nil, nil, 1280, 960)				
+		end
+	end
+end

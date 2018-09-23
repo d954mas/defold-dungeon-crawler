@@ -10,7 +10,9 @@ local scenes = {
     require "scenes.game.game_scene",
 }
 function init(self)
-   COMMON.input_acquire()
+    COMMON.input_acquire()
+    defos.set_view_size(nil, nil, 1280, 720)
+    
     --region FIX module not found
     local reg_scenes = {}
     for i, v in ipairs(scenes) do

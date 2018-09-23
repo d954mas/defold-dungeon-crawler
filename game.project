@@ -1,7 +1,7 @@
 [project]
 title = Dungeon crawler
 version = 0.1
-dependencies = https://github.com/britzl/gooey/archive/master.zip
+dependencies = https://github.com/britzl/gooey/archive/master.zip,https://github.com/subsoap/defos/archive/master.zip
 
 [bootstrap]
 main_collection = /init.collectionc
@@ -12,8 +12,8 @@ game_binding = /game.input_bindingc
 use_accelerometer = 0
 
 [display]
-width = 1280
-height = 720
+width = 1920
+height = 1080
 high_dpi = 1
 
 [physics]

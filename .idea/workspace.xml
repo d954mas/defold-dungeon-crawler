@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="080a989f-84e9-4d79-a922-2b2c24495676" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/defold_api.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/defold_api1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/common.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/game/game.collection" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/game/game_scene.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.project" beforeDir="false" afterPath="$PROJECT_DIR$/game.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/game.input_binding" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/logo.atlas" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/main.collection" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/init.collection" beforeDir="false" afterPath="$PROJECT_DIR$/init.collection" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +32,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="C++" value="1" />
-          <entry key="PLAIN_TEXT" value="10" />
+          <entry key="PLAIN_TEXT" value="11" />
           <entry key="YAML" value="1" />
           <entry key="lua" value="121" />
         </counts>
@@ -59,6 +51,7 @@
           <entry key="input_binding" value="1" />
           <entry key="lua" value="106" />
           <entry key="manifest_ignore" value="1" />
+          <entry key="project" value="1" />
           <entry key="render" value="1" />
           <entry key="render_script" value="3" />
           <entry key="script" value="13" />
@@ -72,10 +65,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scenes/logo/logo_scene.lua">
+        <entry file="file://$PROJECT_DIR$/game.project">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state relative-caret-position="768">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
@@ -153,19 +146,7 @@
             <path>
               <item name="dungeon crawler 2" type="b2602c69:ProjectViewProjectNode" />
               <item name="dungeon crawler 2" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dungeon crawler 2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dungeon crawler 2" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dungeon crawler 2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dungeon crawler 2" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="logo" type="462c0819:PsiDirectoryNode" />
+              <item name="render" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -176,7 +157,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537721355906" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537721366996" />
     <property name="last_opened_file_path" value="$USER_HOME$/development/Defold/defold_api.zip!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -221,12 +202,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537712985950</updated>
-      <workItem from="1537712988466" duration="6543000" />
+      <workItem from="1537712988466" duration="7356000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6543000" />
+    <option name="totallyTimeSpent" value="7356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="338" y="138" width="1400" height="973" extended-state="0" />
@@ -470,8 +451,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scenes/logo/logo_scene.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state relative-caret-position="352">
+          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
