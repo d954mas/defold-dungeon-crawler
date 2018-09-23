@@ -245,6 +245,8 @@ static SEAMenuDelegate* seam__appmenu_delegate;
 static HMENU _seam_create_menu( seam_menu_data* menu, int x, int y )
 #elif defined(SEA_PLATFORM_OSX)
 static id _seam_create_menu( seam_menu_data* menu, int x, int y )
+#else
+static int _seam_create_menu( seam_menu_data* menu, int x, int y )
 #endif
 {
   seam__walk_stack walk_stack;
@@ -260,7 +262,8 @@ static id _seam_create_menu( seam_menu_data* menu, int x, int y )
   id native_menu = [[[NSMenu alloc] initWithTitle:@"File"] autorelease];
   // id native_menu = [[NSMenu new] autorelease];
   [native_menu setAutoenablesItems:NO];
-
+#else
+  int native_menu = 0;
 #endif
 
 
@@ -469,6 +472,8 @@ SEAMDEF void seam_release( seam_menu_data* menu )
     seam__menu_item* next = item->next;
     switch (item->type)
     {
+      case SEAM_SEPARATOR:{} break;
+      case SEAM_GROUP_END:{} break;
       case SEAM_GROUP_BEGIN:
       case SEAM_LABEL: {
         free( item->label );

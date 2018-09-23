@@ -2,22 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="080a989f-84e9-4d79-a922-2b2c24495676" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/world/actions/actions.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/world/actions/base_action.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/world/actions/delay.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/world/actions/move_to.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/world/actions/rotate_to.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/world/player.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/world/world.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/world/world_mc.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dungeon crawler 2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dungeon crawler 2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/defold_api1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/game.atlas" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.project" beforeDir="false" afterPath="$PROJECT_DIR$/game.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/render/my.render_script" beforeDir="false" afterPath="$PROJECT_DIR$/render/my.render_script" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/ext.manifest_ignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resizer/mnu/ext.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resizer/mnu/src/mnu.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resizer/mnu/src/sea_menu.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resizer/mnu/src/sea_menu_imp.mm" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/game/game.collection" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/game/game.collection" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/game/game_scene.lua" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/game/game_scene.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/world/actions/actions.lua" beforeDir="false" afterPath="$PROJECT_DIR$/world/actions/actions.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/world/actions/delay.lua" beforeDir="false" afterPath="$PROJECT_DIR$/world/actions/delay.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/world/actions/move_to.lua" beforeDir="false" afterPath="$PROJECT_DIR$/world/actions/move_to.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/world/actions/rotate_to.lua" beforeDir="false" afterPath="$PROJECT_DIR$/world/actions/rotate_to.lua" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +39,7 @@
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C++" value="1" />
+          <entry key="C++" value="2" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="YAML" value="1" />
           <entry key="lua" value="155" />
@@ -59,7 +54,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="collection" value="5" />
-          <entry key="cpp" value="1" />
+          <entry key="cpp" value="2" />
           <entry key="display_profiles" value="1" />
           <entry key="go" value="2" />
           <entry key="input_binding" value="1" />
@@ -75,19 +70,6 @@
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
     </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scenes/game/game_scene.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="50" column="66" lean-forward="true" selection-start-line="50" selection-start-column="66" selection-end-line="50" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -113,6 +95,7 @@
       <find>logger</find>
       <find>ceil</find>
       <find>print</find>
+      <find>seam_</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -270,12 +253,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537712985950</updated>
-      <workItem from="1537712988466" duration="16160000" />
+      <workItem from="1537712988466" duration="17370000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16160000" />
+    <option name="totallyTimeSpent" value="17370000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="241" y="221" width="1400" height="973" extended-state="0" />
@@ -317,9 +300,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Jester/jester.lua">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Jester/proxy_loader.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -601,8 +581,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scenes/game/game_scene.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="50" column="66" lean-forward="true" selection-start-line="50" selection-start-column="66" selection-end-line="50" selection-end-column="66" />
+        <state relative-caret-position="177">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resizer/mnu/src/mnu.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
         </state>
       </provider>
     </entry>

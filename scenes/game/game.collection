@@ -40,7 +40,7 @@ instances {
   }
 }
 instances {
-  id: "camera"
+  id: "camera_local"
   prototype: "/rendercam/camera.go"
   position {
     x: 0.0
@@ -99,48 +99,8 @@ instances {
 }
 scale_along_z: 0
 embedded_instances {
-  id: "go"
-  data: "embedded_components {\n"
-  "  id: \"sprite\"\n"
-  "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/assets/images/game/game.atlas\\\"\\n"
-  "default_animation: \\\"wall3\\\"\\n"
-  "material: \\\"/assets/materials/3dsprite.material\\\"\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 32.0\n"
-  "    y: 32.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  ""
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 0.015625
-    y: 0.015625
-    z: 0.015625
-  }
-}
-embedded_instances {
-  id: "go1"
-  children: "camera"
+  id: "camera"
+  children: "camera_local"
   data: ""
   position {
     x: 0.5

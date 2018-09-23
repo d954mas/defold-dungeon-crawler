@@ -1,6 +1,6 @@
-local MoveTo = require "libs.world.actions.move_to"
-local RotateTo = require "libs.world.actions.rotate_to"
-local Delay = require "libs.world.actions.delay"
+local MoveTo = require "world.actions.move_to"
+local RotateTo = require "world.actions.rotate_to"
+local Delay = require "world.actions.delay"
 local M = {}
 
 

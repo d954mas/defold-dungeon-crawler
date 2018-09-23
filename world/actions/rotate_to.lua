@@ -1,4 +1,4 @@
-local BaseAction = require("libs.world.actions.base_action")
+local BaseAction = require("world.actions.base_action")
 local M = BaseAction:subclass("RotateToAction")
 
 function M:initialize(model, time, rotate_to)
