@@ -1,7 +1,7 @@
 [project]
 title = Dungeon crawler
 version = 0.1
-dependencies = https://github.com/britzl/gooey/archive/master.zip,https://github.com/subsoap/defos/archive/master.zip
+dependencies = https://github.com/britzl/gooey/archive/master.zip,https://github.com/subsoap/defos/archive/master.zip,https://github.com/rgrams/rendercam/archive/v1.0.zip
 
 [bootstrap]
 main_collection = /init.collectionc

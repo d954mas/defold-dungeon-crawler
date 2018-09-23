@@ -1,0 +1,60 @@
+images {
+  image: "/assets/images/empty.png"
+}
+images {
+  image: "/assets/images/game/sprites/orc.png"
+}
+images {
+  image: "/assets/images/game/sprites/player.png"
+}
+images {
+  image: "/assets/images/game/sprites/sign.png"
+}
+images {
+  image: "/assets/images/game/sprites/sign_wall.png"
+}
+images {
+  image: "/assets/images/game/sprites/sprite1.png"
+}
+images {
+  image: "/assets/images/game/sprites/sprite2.png"
+}
+images {
+  image: "/assets/images/game/sprites/sprite3.png"
+}
+images {
+  image: "/assets/images/game/sprites/sword.png"
+}
+images {
+  image: "/assets/images/game/sprites/tree.png"
+}
+images {
+  image: "/assets/images/game/walls/colorstone.png"
+}
+images {
+  image: "/assets/images/game/walls/eagle.png"
+}
+images {
+  image: "/assets/images/game/walls/grass.png"
+}
+images {
+  image: "/assets/images/game/walls/mossy.png"
+}
+images {
+  image: "/assets/images/game/walls/purplestone.png"
+}
+images {
+  image: "/assets/images/game/walls/wall1.png"
+}
+images {
+  image: "/assets/images/game/walls/wall2.png"
+}
+images {
+  image: "/assets/images/game/walls/wall3.png"
+}
+images {
+  image: "/assets/images/game/walls/wall4.png"
+}
+margin: 0
+extrude_borders: 2
+inner_padding: 0
