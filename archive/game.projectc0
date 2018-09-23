@@ -1,0 +1,39 @@
+[project]
+title = My project
+version = 0.1
+custom_resources = assets/images
+
+[bootstrap]
+main_collection = /scenes/main/main.collectionc
+render = /render/my.renderc
+
+[input]
+game_binding = /game.input_bindingc
+use_accelerometer = 0
+repeat_interval = 0.1
+repeat_delay = 0.1
+
+[display]
+width = 960
+height = 640
+display_profiles = /render/my.display_profilesc
+
+[physics]
+scale = 1.0
+
+[script]
+shared_state = 1
+
+[graphics]
+default_texture_min_filter = nearest
+default_texture_mag_filter = nearest
+
+[resource]
+max_resources = 2048
+
+[sprite]
+max_count = 2048
+
+[collection]
+max_instances = 2048
+
