@@ -2,7 +2,7 @@ function init(self)
 	msg.post(".", "acquire_input_focus")
 	self.resize_node = gui.get_node("resize_node")
 	local os = sys.get_sys_info().system_name
-	if os == "Android" or os == "iPhone OS" then
+	if os ~= "Windows" and os ~= "Darwin" then
 		msg.post(".", "disable")
 	end	
 end
