@@ -40,7 +40,7 @@ instances {
   }
 }
 instances {
-  id: "camera_local"
+  id: "camera"
   prototype: "/rendercam/camera.go"
   position {
     x: 0.0
@@ -99,13 +99,13 @@ instances {
 }
 scale_along_z: 0
 embedded_instances {
-  id: "camera"
-  children: "camera_local"
+  id: "player"
+  children: "camera"
   data: ""
   position {
-    x: 0.5
-    y: 0.5
-    z: 0.5
+    x: 0.0
+    y: 0.0
+    z: 0.0
   }
   rotation {
     x: 0.0

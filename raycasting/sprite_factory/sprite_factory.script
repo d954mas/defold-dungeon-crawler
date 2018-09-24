@@ -154,9 +154,8 @@ function final(self)
 	dispose()
 end
 
-local quat_x = vmath.quat_rotation_x(math.pi / 2)
 local function rotate_player_angle_sprites()
-	local angle = quat_x * vmath.quat_rotation_y(-PLAYER.angle)
+	local angle = vmath.quat_rotation_y(-PLAYER.angle)
 	for k, _ in pairs(ROTATED_SPRITE) do
 		go.set_rotation(angle, k)
 	end	
@@ -193,16 +192,6 @@ function update(self, dt)
 	native_raycasting.update_camera(PLAYER.position.x, PLAYER.position.y, PLAYER.angle)
 	local need_load, need_update, need_unload = native_raycasting.update_sprites()
 
-	if self.loaded then return end
-	self.loaded = true
-	need_load = {}
-	for y=1,24 do
-		for  x=1,24 do
-			table.insert(need_load,
-						 {x=x,y=y})
-		end
-	end
-	
 	for _,zone in ipairs(need_unload) do
 		local zoneSprites = get_zone_data(zone.x, zone.y)
 		assert(zoneSprites.existed, "can't unload not existed zone")
@@ -238,16 +227,16 @@ function update(self, dt)
 		zoneSprites.existed = true
 		local cell = WORLD.map.CELLS[zone.y][zone.x]
 		load_sprites_from_table(zoneSprites.other, cell.other)
-		--if zone.right then
+		if zone.right then
 			load_sprites_from_table(zoneSprites.west, cell.west)
-		--else
+		else
 			load_sprites_from_table(zoneSprites.east, cell.east)
-	--	end
-	--	if zone.top then
+		end
+		if zone.top then
 			load_sprites_from_table(zoneSprites.south, cell.south)
-		--else
+		else
 			load_sprites_from_table(zoneSprites.north, cell.north)
-		--end
+		end
 	end
 	rotate_player_angle_sprites()
 	unload_free_sprites()

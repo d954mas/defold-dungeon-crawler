@@ -9,10 +9,8 @@ local function ensure_hash(string_or_hash)
 	return type(string_or_hash) == "string" and hash(string_or_hash) or string_or_hash
 end
 
-function M.new()
-	local self = setmetatable({}, M)
+function M:initialize()
 	self.action_funs = {}
-	return self
 end
 
 function M:add_mouse(fun)

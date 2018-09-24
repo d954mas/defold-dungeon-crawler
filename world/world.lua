@@ -26,11 +26,11 @@ function M.can_move(x, y)
 	y = math.ceil(y)
 	if x > 0 and x <= M.map.WIDTH and y>0 and y<= M.map.HEIGHT then
 		local cell = M.map.CELLS[y][x]
-		for _, obj in pairs(DYNAMICS_OBJ.objs) do
+	--[[	for _, obj in pairs(DYNAMICS_OBJ.objs) do
 			if x == math.ceil(obj.sprite.position.x) and y == math.ceil(obj.sprite.position.y) then
 				return false
 			end		
-		end	
+		end	--]]
 		return not cell.blocked
 	else
 		return false
@@ -47,7 +47,12 @@ function M.update(dt)
 	end	
 	if PLAYER.action ~= nil and PLAYER.action.done then
 		PLAYER.action = nil
-	end	
+	end
+
+
+
+	go.set_position(vmath.vector3(PLAYER.position.x,0.5,-PLAYER.position.y),"/player")
+	go.set_rotation(vmath.quat_rotation_y(-PLAYER.angle),"/player")
 end
 
 

@@ -55,7 +55,7 @@ for _,tree in ipairs(trees) do
 	local width = 1
 	local height = width * 1.1940298
 	cell.blocked = true
-	--table.insert(cell.other, Sprite.new(vmath.vector3(tree.x-0.5,tree.y-0.5,height/2),width,height, "player", "tree"))
+	table.insert(cell.other, Sprite.new(vmath.vector3(tree.x-0.5,tree.y-0.5,height/2),width,height, "player", "tree"))
 end	
 
 for _,sign in ipairs(signs) do
@@ -63,7 +63,7 @@ for _,sign in ipairs(signs) do
 	local height = 0.5
 	local width = height * 1
 	cell.blocked = true
---	table.insert(cell.other, Sprite.new(vmath.vector3(sign.x-0.5,sign.y-0.5,height/2),width,height, "player", "sign"))
+	table.insert(cell.other, Sprite.new(vmath.vector3(sign.x-0.5,sign.y-0.5,height/2),width,height, "player", "sign"))
 end
 
 for _,sign in ipairs(signs_walls) do
@@ -72,9 +72,9 @@ for _,sign in ipairs(signs_walls) do
 	local width = height * 1.7058823
 	cell.blocked = true
 	if sign.side == 1 then
-	--	table.insert(cell.north, Sprite.new(vmath.vector3(sign.x-0.5,sign.y+0.005,0.5),width,height, "north", "sign_wall"))
+		table.insert(cell.north, Sprite.new(vmath.vector3(sign.x-0.5,sign.y+0.005,0.5),width,height, "north", "sign_wall"))
 	elseif sign.side  == 2 then
-		--table.insert(cell.east, Sprite.new(vmath.vector3(sign.x + 0.005,sign.y-0.5,0.5),width,height, "east", "sign_wall"))
+		table.insert(cell.east, Sprite.new(vmath.vector3(sign.x + 0.005,sign.y-0.5,0.5),width,height, "east", "sign_wall"))
 	elseif sign.side == 3 then
 		table.insert(cell.south, Sprite.new(vmath.vector3(sign.x-0.5,sign.y-1 -0.005,0.5),width,height, "south", "sign_wall"))
 	elseif sign.side == 4 then
