@@ -68,8 +68,9 @@ function Scene:initialize()
 end
 
 function Scene:init_camera()
-    native_raycasting.set_camera_rays(320)
-    native_raycasting.set_camera_max_dist(20)
+    --todo use 2 rays
+    native_raycasting.set_camera_rays(256)
+    native_raycasting.set_camera_max_dist(50)
     native_raycasting.set_camera_fov(1.88)
 end
 

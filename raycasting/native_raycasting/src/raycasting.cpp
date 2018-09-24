@@ -12,7 +12,7 @@ static inline void countStep(int mapX, double startX, double dx, double absDx, i
 		*stepX = - 1;
 	}
 }
-void castRay(Camera* camera, double rayAngle, Map* map, double maxDistance, std::set<Zone> &zones, bool blocking){
+void castRay(Camera* camera, double rayAngle, Map* map, double maxDistance, std::unordered_set<Zone> &zones, bool blocking){
 	double angle = camera->angle + rayAngle;
 	int mapX = (int)camera->x, mapY = (int)camera->y;
 	double angleSin = sin(angle), angleCos = cos(angle);

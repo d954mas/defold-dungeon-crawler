@@ -7,6 +7,7 @@
 #include <math.h>
 #include <algorithm>
 #include <set>
+#include <unordered_set>
 #include <vector>
 #include "world_structures.h"
 #include "raycasting.h"
@@ -14,13 +15,16 @@
 static Camera CAMERA;
 static Map MAP;
 static std::vector<double> ANGLES;
-static std::set<Zone> ZONE_SET;
+static std::unordered_set <Zone> ZONE_SET;
 static std::vector<Zone> VISIBLE_ZONES;
 static std::vector<Zone> NEED_LOAD_ZONES;
 static std::vector<Zone> NEED_UPDATE_ZONES;
 static std::vector<Zone> NEED_UNLOAD_ZONES;
 static double viewDist = 0;
 static double maxDistance = 30;
+
+
+
 
 static void viewDistanceUpdated(){
 	viewDist = CAMERA.rays/(2 * tan(CAMERA.fov/2.0));
@@ -79,15 +83,12 @@ void raycastVisibilityFov(lua_State* L){
 	double fov = lua_tonumber(L, 1);
 	int rays = (int)lua_tonumber(L, 2);
 	double maxDist = lua_tonumber(L, 3);
-	std::set<Zone> zones;
+	std::unordered_set<Zone> zones;
 	double viewDist = rays/(2 * tan(fov/2.0));
 	for(int i=0; i<CAMERA.rays>>1; i++){
 		double rayAngle = atan(i/viewDist);
-		for(int j=0;j<2;j++){
-			double currentAngle = (j==1) ? -rayAngle : rayAngle;
-			//cast ray
-			castRay(&CAMERA, currentAngle, &MAP, maxDist, zones, true);
-		}
+		castRay(&CAMERA, -rayAngle, &MAP, maxDist, zones, false);
+		castRay(&CAMERA, rayAngle, &MAP, maxDist, zones, false);
 	}
 	lua_newtable(L);
 	int i =0;
@@ -111,11 +112,8 @@ void updateVisibleSprites(lua_State* L){
 	//	for(int i=0; i<1; i++){
 	for(int i=0; i<CAMERA.rays>>1; i++){
 		double rayAngle = ANGLES[i];
-		for(int j=0;j<2;j++){
-			double currentAngle = (j==1) ? -rayAngle : rayAngle;
-			//cast ray
-			castRay(&CAMERA, currentAngle, &MAP, maxDistance, ZONE_SET, false);
-		}
+		castRay(&CAMERA, -rayAngle, &MAP, maxDistance, ZONE_SET, false);
+		castRay(&CAMERA, rayAngle, &MAP, maxDistance, ZONE_SET, false);
 	}
 	//reset prev raycasting
 	for(Zone z : VISIBLE_ZONES){
