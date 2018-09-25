@@ -3,6 +3,8 @@ local M = {}
 M.HASHES = require "libs.hashes"
 M.MSG = require "libs.msg_receiver"
 
+M.GLOBAL = {} 
+
 --region input
 M.INPUT = require "libs.input_receiver"
 function M.input_acquire(url)

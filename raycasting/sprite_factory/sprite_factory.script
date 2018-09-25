@@ -4,6 +4,7 @@ local HASHES = require "libs.hashes"
 local MsgReceiver = require "libs.msg_receiver"
 local LOG = require "libs.log"
 local TAG = "SPRITE_FACTORY"
+local COMMON = require "libs.common"
 
 go.property("pool_size", 1024)
 local SPRITE_STEP = 100 --increase pool when needed
@@ -240,6 +241,8 @@ function update(self, dt)
 	end
 	rotate_player_angle_sprites()
 	unload_free_sprites()
+
+	COMMON.GLOBAL.used_sprites = #SPRITE_URLS - #SPRITES_POOL
 end
 
 function on_message(self, message_id, message, sender)

@@ -35,6 +35,9 @@ M.MSG_ACQUIRE_CAMERA_FOCUS = hash("acquire_camera_focus")
 M.MSG_SET_PARENT = hash("set_parent")
 M.RGB = hash("rgb")
 
+
+M.MSG_TOGGLE_DEBUG_GUI = hash("toggle_debug_gui")
+
 function M.ensure_hash(string_or_hash)
 	return type(string_or_hash) == "string" and hash(string_or_hash) or string_or_hash
 end

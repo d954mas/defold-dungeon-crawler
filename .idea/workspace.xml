@@ -3,7 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="080a989f-84e9-4d79-a922-2b2c24495676" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raycasting/native_raycasting/src/native_raycasting.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/raycasting/native_raycasting/src/native_raycasting.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/roboto_regular.font" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/roboto_regular.font" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/empty.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/empty.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/game/game.atlas" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/game/game.atlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/gui.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.input_binding" beforeDir="false" afterPath="$PROJECT_DIR$/game.input_binding" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/common.lua" beforeDir="false" afterPath="$PROJECT_DIR$/libs/common.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/hashes.lua" beforeDir="false" afterPath="$PROJECT_DIR$/libs/hashes.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raycasting/sprite_factory/sprite_factory.script" beforeDir="false" afterPath="$PROJECT_DIR$/raycasting/sprite_factory/sprite_factory.script" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/render/my.render_script" beforeDir="false" afterPath="$PROJECT_DIR$/render/my.render_script" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/game/game.collection" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/game/game.collection" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/game/game_scene.lua" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/game/game_scene.lua" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,49 +26,55 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="display_profiles" value="21" />
-          <entry key="gui_script" value="13" />
+          <entry key="gui_script" value="117" />
           <entry key="input_binding" value="2" />
-          <entry key="lua" value="930" />
-          <entry key="script" value="1373" />
+          <entry key="lua" value="1161" />
+          <entry key="render_script" value="1" />
+          <entry key="script" value="1618" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="C++" value="5" />
-          <entry key="PLAIN_TEXT" value="18" />
+          <entry key="Image" value="2" />
+          <entry key="PLAIN_TEXT" value="26" />
           <entry key="YAML" value="1" />
-          <entry key="lua" value="168" />
+          <entry key="lua" value="193" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="23" />
-          <entry key="lua" value="2316" />
+          <entry key="lua" value="2897" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="collection" value="6" />
+          <entry key="atlas" value="2" />
+          <entry key="collection" value="7" />
           <entry key="cpp" value="4" />
           <entry key="display_profiles" value="1" />
-          <entry key="go" value="3" />
-          <entry key="gui_script" value="1" />
+          <entry key="go" value="5" />
+          <entry key="gui" value="3" />
+          <entry key="gui_script" value="7" />
           <entry key="h" value="1" />
           <entry key="input_binding" value="1" />
-          <entry key="lua" value="142" />
+          <entry key="lua" value="148" />
           <entry key="manifest" value="1" />
           <entry key="manifest_ignore" value="1" />
+          <entry key="png" value="2" />
           <entry key="project" value="1" />
           <entry key="render" value="1" />
-          <entry key="render_script" value="3" />
-          <entry key="script" value="23" />
+          <entry key="render_script" value="4" />
+          <entry key="script" value="35" />
           <entry key="texture_profiles" value="2" />
           <entry key="yml" value="1" />
         </counts>
@@ -70,10 +85,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scenes/game/game_scene.lua">
+        <entry file="file://$PROJECT_DIR$/scenes/game/gui/debug_game_gui.gui">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="61" column="28" lean-forward="true" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+            <state relative-caret-position="176">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -102,11 +117,12 @@
       <find>world.w</find>
       <find>logger</find>
       <find>ceil</find>
-      <find>print</find>
       <find>seam_</find>
       <find>ROTATED_SPRITE</find>
       <find>raycast_v</find>
       <find>native_</find>
+      <find>used_sprites</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -127,20 +143,22 @@
         <option value="$PROJECT_DIR$/libs/flow.lua" />
         <option value="$PROJECT_DIR$/libs/constants.lua" />
         <option value="$PROJECT_DIR$/render/my.display_profiles" />
-        <option value="$PROJECT_DIR$/render/my.render_script" />
         <option value="$PROJECT_DIR$/game.input_binding" />
         <option value="$PROJECT_DIR$/libs/common.lua" />
-        <option value="$PROJECT_DIR$/libs/hashes.lua" />
         <option value="$PROJECT_DIR$/scenes/logo/logo_scene.lua" />
         <option value="$PROJECT_DIR$/world/world_mc.lua" />
         <option value="$PROJECT_DIR$/assets/maps/map.lua" />
         <option value="$PROJECT_DIR$/resizer/mnu/ext.manifest" />
         <option value="$PROJECT_DIR$/resizer/example.gui_script" />
-        <option value="$PROJECT_DIR$/raycasting/sprite_factory/sprite_factory.script" />
         <option value="$PROJECT_DIR$/world/world.lua" />
         <option value="$PROJECT_DIR$/libs/input_receiver.lua" />
         <option value="$PROJECT_DIR$/assets/maps/test_map.lua" />
         <option value="$PROJECT_DIR$/raycasting/native_raycasting/src/lua_raycasting.cpp" />
+        <option value="$PROJECT_DIR$/raycasting/sprite_factory/sprite_factory.script" />
+        <option value="$PROJECT_DIR$/scenes/game/gui/debug_game_gui.gui_script" />
+        <option value="$PROJECT_DIR$/libs/hashes.lua" />
+        <option value="$PROJECT_DIR$/scenes/game/gui/debug_gui.script" />
+        <option value="$PROJECT_DIR$/render/my.render_script" />
         <option value="$PROJECT_DIR$/scenes/game/game_scene.lua" />
       </list>
     </option>
@@ -152,8 +170,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="407" />
-    <option name="y" value="50" />
+    <option name="x" value="146" />
+    <option name="y" value="101" />
     <option name="width" value="1400" />
     <option name="height" value="973" />
   </component>
@@ -172,13 +190,13 @@
             <path>
               <item name="dungeon crawler 2" type="b2602c69:ProjectViewProjectNode" />
               <item name="dungeon crawler 2" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="raycasting" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dungeon crawler 2" type="b2602c69:ProjectViewProjectNode" />
               <item name="dungeon crawler 2" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="maps" type="462c0819:PsiDirectoryNode" />
+              <item name="raycasting" type="462c0819:PsiDirectoryNode" />
+              <item name="sprite_factory" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dungeon crawler 2" type="b2602c69:ProjectViewProjectNode" />
@@ -194,7 +212,9 @@
             <path>
               <item name="dungeon crawler 2" type="b2602c69:ProjectViewProjectNode" />
               <item name="dungeon crawler 2" type="462c0819:PsiDirectoryNode" />
-              <item name="world" type="462c0819:PsiDirectoryNode" />
+              <item name="scenes" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -205,7 +225,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537825067620" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537912427365" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../raycasting" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -240,16 +260,18 @@
       <option name="presentableId" value="Default" />
       <updated>1537712985950</updated>
       <workItem from="1537712988466" duration="18493000" />
+      <workItem from="1537904208194" duration="5730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23540000" />
+    <option name="totallyTimeSpent" value="29270000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="407" y="50" width="1400" height="973" extended-state="0" />
+    <frame x="146" y="101" width="1400" height="973" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25372022" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -267,7 +289,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="11" visible="true" weight="0.33791524" />
+      <window_info anchor="bottom" id="Version Control" order="11" visible="true" weight="0.33791524" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -285,14 +307,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/libs/ecs.lua" />
-    <entry file="file://$PROJECT_DIR$/libs/flow.lua" />
-    <entry file="file://$PROJECT_DIR$/libs/coroutines.lua" />
-    <entry file="file://$PROJECT_DIR$/libs/screen_helper.lua" />
-    <entry file="file://$PROJECT_DIR$/native/src/binding.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/native/ext.manifest_ignore" />
     <entry file="file://$PROJECT_DIR$/render/my.display_profiles">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -302,13 +316,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/render/my.render">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/render/my.render_script">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml" />
     <entry file="file://$PROJECT_DIR$/default.texture_profiles">
@@ -321,28 +328,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/common.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-          <folding>
-            <element signature="e#85#99#0" />
-            <element signature="e#266#278#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/constants.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/hashes.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
@@ -429,13 +418,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/raycasting/sprite_factory/sprite_factory.script">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1193">
-          <caret line="216" column="53" selection-start-line="216" selection-start-column="53" selection-end-line="216" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Jester/proxy_scene.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
@@ -468,10 +450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
           <caret line="250" selection-start-line="250" selection-end-line="250" />
-          <folding>
-            <element signature="e#0#12747#0" />
-            <element signature="e#0#12747#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -494,13 +472,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/world/player.lua">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scenes/game/game.collection">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/world/world.lua">
       <provider selected="true" editor-type-id="text-editor">
@@ -547,10 +518,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/libs/common.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/hashes.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="21" column="52" lean-forward="true" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scenes/game/game.collection">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scenes/game/gui/debug_gui.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/images/gui/gui.atlas">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/images/white.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raycasting/sprite_factory/sprite_factory.script">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1492">
+          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/render/my.render_script">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scenes/game/game_scene.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="61" column="28" lean-forward="true" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+        <state relative-caret-position="403">
+          <caret line="109" column="27" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scenes/game/gui/debug_gui.script">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" selection-start-line="4" selection-start-column="31" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scenes/game/gui/debug_game_gui.gui_script">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scenes/game/gui/debug_game_gui.gui">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
         </state>
       </provider>
     </entry>

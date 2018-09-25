@@ -1,0 +1,23 @@
+local COMMON = require "libs.common"
+
+go.property("show", false)
+
+local function update_gui(self)
+	msg.post("#debug_game_gui", self.show and "enable" or "disable")
+end	
+
+function init(self)
+	update_gui(self)
+	COMMON.input_acquire()
+end
+
+function final(self)
+	COMMON.input_release()
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("toggle_debug_gui") and action.pressed then
+		self.show = not self.show
+		update_gui(self)
+	end	
+end

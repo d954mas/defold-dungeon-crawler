@@ -69,18 +69,18 @@ end
 
 function Scene:init_camera()
     --todo use 2 rays
-    native_raycasting.set_camera_rays(256)
-    native_raycasting.set_camera_max_dist(50)
-    native_raycasting.set_camera_fov(1.88)
 end
 
 function Scene:on_show(input)
     self:init_camera()
     local MAP = require "assets.maps.test_map"
     WORLD.mc:change_map(MAP)
+    rendercam.add_window_listener(msg.url())
 end
 
-
+function Scene:on_hide()
+    rendercam.remove_window_listener(msg.url())
+end
 
 function Scene:init(go_self)
     self:init_input()
@@ -95,6 +95,19 @@ function Scene:update(go_self, dt)
 end
 
 function Scene:show_out(co)
+end
+
+function Scene:on_message(go_self, message_id, message, sender)
+    if message_id == hash("window_update") then
+        local aspect = message.aspect
+        local fov = message.fov
+        local rays = 256 * aspect/(16/9)
+        local fov_h = 2*math.atan(aspect*math.tan(fov/2)) * 1.1 -- use bigger
+        native_raycasting.set_camera_fov(fov_h)
+        native_raycasting.set_camera_rays(rays)
+        COMMON.GLOBAL.sprite_rays = rays
+        COMMON.GLOBAL.fov_h = fov_h
+    end
 end
 
 function Scene:on_input(go_self, action_id, action, sender)

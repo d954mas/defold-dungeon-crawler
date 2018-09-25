@@ -1,0 +1,39 @@
+local COMMON = require "libs.common"
+
+function init(self)
+	self.lbl_sprites = gui.get_node("lbl_sprites")
+	self.lbl_cpu = gui.get_node("lbl_cpu")
+	self.lbl_memory = gui.get_node("lbl_memory")
+	self.lbl_fov_h = gui.get_node("lbl_fov_h")
+	self.lbl_rays = gui.get_node("lbl_rays")
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	gui.set_text(self.lbl_sprites, "Sprites:" .. COMMON.GLOBAL.used_sprites)
+	if COMMON.GLOBAL.fov_h then gui.set_text(self.lbl_fov_h, "Fov H:" .. string.format("%.2f",COMMON.GLOBAL.fov_h)) end
+	if COMMON.GLOBAL.sprite_rays then gui.set_text(self.lbl_rays, "Rays:" .. string.format("%.0f",COMMON.GLOBAL.sprite_rays)) end
+	
+	gui.set_text(self.lbl_cpu, "Cpu:" .. string.format("%.2f", profiler.get_cpu_usage()))
+	gui.set_text(self.lbl_memory, "Mem:" .. string.format("%.2f Mb", profiler.get_memory_usage()/1024/1024))
+	
+end
+
+function on_message(self, message_id, message, sender)
+	-- Add message-handling code here
+	-- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+	-- Add input-handling code here
+	-- Remove this function if not needed
+end
+
+function on_reload(self)
+	-- Add input-handling code here
+	-- Remove this function if not needed
+end
