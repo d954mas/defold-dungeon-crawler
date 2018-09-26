@@ -8,6 +8,23 @@ local WINDOW_RESIZED = hash("window_resized")
 local UPDATE_WINDOW = hash("update window")
 
 
+local function fixed_projection(near, far, zoom)
+    local projected_width = render.get_window_width() / (zoom or 1)
+    local projected_height = render.get_window_height() / (zoom or 1)
+    local xoffset = -(projected_width - render.get_width()) / 2
+    local yoffset = -(projected_height - render.get_height()) / 2
+    return vmath.matrix4_orthographic(xoffset, xoffset + projected_width, yoffset, yoffset + projected_height, near, far)
+end
+
+local function fixed_fit_projection(near, far)
+    local width = render.get_width()
+    local height = render.get_height()
+    local window_width = render.get_window_width()
+    local window_height = render.get_window_height()
+    local zoom = math.min(window_width / width, window_height / height)
+    return fixed_projection(near, far, zoom)
+end
+
 local function update_window(self)
     rendercam.update_window(render.get_window_width(), render.get_window_height())
     self.gui_proj = vmath.matrix4_orthographic(0, rendercam.window.x, 0, rendercam.window.y, -1, 1)
@@ -32,8 +49,8 @@ end
 
 function update(self)
     -- Set view and projection with latest matrices calculated by the module
-    render.set_view(rendercam.calculate_view())
-    render.set_projection(rendercam.calculate_proj())
+    --render.set_view(rendercam.calculate_view())
+    --render.set_projection(rendercam.calculate_proj())
 
     -- Set viewport (x and y will be zero unless using a fixed aspect ratio)
     render.set_viewport(vp.x, vp.y, vp.width, vp.height)
@@ -48,8 +65,17 @@ function update(self)
     render.set_blend_func(render.BLEND_SRC_ALPHA, render.BLEND_ONE_MINUS_SRC_ALPHA)
     render.disable_state(render.STATE_CULL_FACE)
 
+    render.set_view(IDENTITY_MATRIX)
+    render.set_projection(fixed_fit_projection(-1, 1))
+    --default 2d
     render.draw(self.tile_pred)
     render.draw(self.particle_pred)
+    
+
+    --3d
+    render.set_view(rendercam.calculate_view())
+    render.set_projection(rendercam.calculate_proj())
+    
 
     render.set_blend_func(render.BLEND_SRC_ALPHA, render.BLEND_ONE_MINUS_SRC_ALPHA)
    -- render.enable_state(render.STATE_CULL_FACE)
@@ -61,6 +87,13 @@ function update(self)
     render.disable_state(render.STATE_DEPTH_TEST)
   --  render.disable_state(render.STATE_CULL_FACE)
     render.draw_debug3d()
+
+    --2d
+    render.set_view(IDENTITY_MATRIX)
+    render.set_projection(fixed_fit_projection(-1, 1))
+    
+    render.draw(self.tile_pred)
+    render.draw(self.particle_pred)
 
     -- GUI Rendering
     render.set_viewport(0, 0, rendercam.window.x, rendercam.window.y)

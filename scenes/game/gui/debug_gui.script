@@ -1,15 +1,72 @@
 local COMMON = require "libs.common"
+local WORLD = require "world.world"
+local FOV_COLOR = vmath.vector3(255,255,255)
+local PLAYER_COLOR = vmath.vector3(255,0,0)
+
+
 
 go.property("show", false)
 
 local function update_gui(self)
-	msg.post("#debug_game_gui", self.show and "enable" or "disable")
-end	
+	local msg_id = hash(self.show and "enable" or "disable")
+	msg.post("#debug_game_gui", msg_id)
+	msg.post("#debug_fov_map_sprite", msg_id)
+end
+
+local function init_fov_map(self)
+	local w,h = 32, 32
+	 self.fov_map_buffer_info = {
+		buffer = buffer.create(w * h, -- size of the buffer width*height
+							   {{
+									name = hash("fov_map_texture_buffer"),
+									type = buffer.VALUE_TYPE_UINT8,
+									count = 3 -- same as channels
+								}}),
+		width = w,
+		height = h,
+		channels = 3
+	}
+	
+	go.set("#debug_fov_map_sprite", "scale", vmath.vector3(256))
+	self.fov_resource_path = go.get("#debug_fov_map_sprite", "texture0")
+end
 
 function init(self)
 	update_gui(self)
 	COMMON.input_acquire()
+	init_fov_map(self)
 end
+
+function update(self, dt)
+	if not self.show then return end
+	--region update fov map
+	print("update2")
+	drawpixels.fill(self.fov_map_buffer_info, 0,0,0,0)
+	local zones = native_raycasting.get_visible_sprites()
+	local zones_map = {}
+	for _, zone in ipairs(zones) do
+		if not zones_map[zone.y] then zones_map[zone.y] = {} end
+		zones_map[zone.y][zone.x] = true
+	end
+
+	local dx =  math.ceil(WORLD.PLAYER.position.x) -self.fov_map_buffer_info.width/2
+	local dy =  math.ceil(WORLD.PLAYER.position.y) -self.fov_map_buffer_info.height/2
+	for y = 1, self.fov_map_buffer_info.height do
+		for x = 1, self.fov_map_buffer_info.width do
+			local pos_x = x + dx
+			local pos_y = y + dy
+			if pos_x == math.ceil(WORLD.PLAYER.position.x) and pos_y == math.ceil(WORLD.PLAYER.position.y) then
+				drawpixels.pixel(self.fov_map_buffer_info, x, y, PLAYER_COLOR.x, PLAYER_COLOR.y, PLAYER_COLOR.z)
+			elseif zones_map[pos_y] and zones_map[pos_y][pos_x] then
+				drawpixels.pixel(self.fov_map_buffer_info, x, y, FOV_COLOR.x, FOV_COLOR.y, FOV_COLOR.z)
+			end
+
+		end
+	end
+	local header = { width = self.fov_map_buffer_info.width, height = self.fov_map_buffer_info.height, type = resource.TEXTURE_TYPE_2D, format = resource.TEXTURE_FORMAT_RGB, num_mip_maps = 1 }
+	resource.set_texture(self.fov_resource_path, header, self.fov_map_buffer_info.buffer)
+	--endregion
+end	
 
 function final(self)
 	COMMON.input_release()
