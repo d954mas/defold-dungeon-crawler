@@ -2,6 +2,7 @@ local M = {}
 
 M.HASHES = require "libs.hashes"
 M.MSG = require "libs.msg_receiver"
+M.MIDDLECLASS = require "libs.middleclass"
 
 M.GLOBAL = {} 
 
@@ -68,6 +69,12 @@ end
 
 function M.critical(message, tag)
 	M.LOG.critical(message,tag)
+end
+--endregion
+
+--region class
+function M.class(name, super)
+	return M.MIDDLECLASS.class(name, super)
 end
 --endregion
 

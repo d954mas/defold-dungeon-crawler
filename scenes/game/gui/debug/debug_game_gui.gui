@@ -1,4 +1,4 @@
-script: "/scenes/game/gui/debug_game_gui.gui_script"
+script: "/scenes/game/gui/debug/debug_game_gui.gui_script"
 fonts {
   name: "roboto_regular"
   font: "/assets/fonts/roboto_regular.font"
