@@ -1,0 +1,7 @@
+mesh: "/assets/models/inv_sphere.dae"
+material: "/assets/materials/sky.material"
+textures: "/defold-standard-geometry/textures/stars.png"
+skeleton: ""
+animations: ""
+default_animation: ""
+name: "unnamed"

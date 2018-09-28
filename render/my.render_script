@@ -37,7 +37,7 @@ function init(self)
     self.model_pred = render.predicate({"model"})
     self.particle_pred = render.predicate({"particle"})
     self.sprite_3d_pred = render.predicate({"sprite_3d"})
-
+    self.skybox_pred = render.predicate({"skybox"})
     self.clear_color = vmath.vector4(0)
 
     native_raycasting.set_camera_max_dist(50)
@@ -81,6 +81,7 @@ function update(self)
    -- render.enable_state(render.STATE_CULL_FACE)
     render.enable_state(render.STATE_DEPTH_TEST)
     render.set_depth_mask(true)
+    render.draw(self.skybox_pred)
     render.draw(self.model_pred)
     render.draw(self.sprite_3d_pred)
     -- Physics debug and draw_line rendering

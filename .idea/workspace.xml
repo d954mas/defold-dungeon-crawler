@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="080a989f-84e9-4d79-a922-2b2c24495676" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/init_controller.script" beforeDir="false" afterPath="$PROJECT_DIR$/init_controller.script" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/log.lua" beforeDir="false" afterPath="$PROJECT_DIR$/libs/log.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/game/gui/debug/debug_gui.script" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/game/gui/debug/debug_gui.script" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/game/gui/game.gui_script" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/game/gui/game.gui_script" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/game/gui/minimap/minimap.lua" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/game/gui/minimap/minimap.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/world/world.lua" beforeDir="false" afterPath="$PROJECT_DIR$/world/world.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/materials/sky.fp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/materials/sky.fp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/render/my.render_script" beforeDir="false" afterPath="$PROJECT_DIR$/render/my.render_script" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/game/game.collection" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/game/game.collection" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +168,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="301" />
     <option name="width" value="1400" />
     <option name="height" value="973" />
@@ -219,7 +217,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538169820726" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538171592806" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../raycasting" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -256,12 +254,12 @@
       <workItem from="1537712988466" duration="18493000" />
       <workItem from="1537904208194" duration="6330000" />
       <workItem from="1537991496479" duration="18875000" />
-      <workItem from="1538167262554" duration="2552000" />
+      <workItem from="1538167262554" duration="3152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51297000" />
+    <option name="totallyTimeSpent" value="51897000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="301" y="0" width="1400" height="973" extended-state="0" />
