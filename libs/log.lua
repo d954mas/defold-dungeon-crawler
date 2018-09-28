@@ -1,5 +1,5 @@
 local M = {}
-
+M.print_f = print
 M.appname = "DefoldLog"
 M.print = false
 M.verbose = false
@@ -51,6 +51,10 @@ end
 function M.add_to_blacklist(tag, state)
 	state = state or true
 	M.tag_blacklist[tag] = state
+end
+
+function M.override_print()
+	print = M.i
 end
 
 -- Sets the minimum log level to log, default is log.DEBUG
@@ -179,7 +183,7 @@ function M.save_log_line(line, level, tag, debug_level)
 	end
 
 	local complete_line = head .. " " .. body .. " " .. line
-	if M.print == true then print(complete_line) end
+	if M.print == true then M.print_f(complete_line) end
 
 	log:write(complete_line, "\n")
 	io.close(log)

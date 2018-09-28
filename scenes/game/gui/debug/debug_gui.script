@@ -40,7 +40,6 @@ end
 function update(self, dt)
 	if not self.show then return end
 	--region update fov map
-	print("update2")
 	drawpixels.fill(self.fov_map_buffer_info, 0,0,0,0)
 	local zones = native_raycasting.get_visible_sprites()
 	local zones_map = {}

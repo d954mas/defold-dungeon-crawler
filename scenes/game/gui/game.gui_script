@@ -12,7 +12,7 @@ function final(self)
 end
 
 function update(self, dt)
-	self.minimap:set_position(WORLD.PLAYER.position)
+	self.minimap:update()
 	gui.set_rotation(self.player_pointer_node, vmath.quat_rotation_z(-WORLD.PLAYER.angle))
 end
 

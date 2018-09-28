@@ -1,5 +1,14 @@
 local COMMON = require "libs.common"
+local WORLD = require "world.world"
+
+local UNKNOWN_COLOR = vmath.vector4(0, 0, 0, 1)
+local BLOCKED_COLOR = vmath.vector4(0.5, 0.5, 0.5, 1)
+local EMPTY_COLOR = vmath.vector4(1, 1, 1, 1)
+
+---@class GuiMinimap
+---@field node_map MinimapCell[]
 local Map = COMMON.class("Minimap")
+
 
 ---@class MinimapCell
 ---@field root_node
@@ -56,26 +65,21 @@ function Map:free_cell(cell)
 end
 
 function Map:set_position(pos)
-	pos = vmath.vector3(pos.x, pos.y,0)
---	print(pos.x)
-	local h_w, h_h = self.width/2, self.height/2
---	print(pos.x - h_w)
---	print(pos.x + h_w)
+	--cell left side 0 right side 1
+	pos = vmath.vector3(pos)
+	pos.x = pos.x + 1
+	local h_w, h_h = self.width/
+			2, self.height/2
 	local min_x, max_x = math.floor(pos.x - h_w), math.ceil(pos.x + h_w)-1
 	local min_y, max_y = math.floor(pos.y - h_h), math.ceil(pos.y + h_h)
 
 	local dx, dy = -(pos.x - h_w-min_x), -(pos.y - h_w-min_y)
---	print("X:" .. min_x .. "-" .. max_x)
 	for cell_id, cell in pairs(self.node_map) do
-		--update_pos
 		if cell.x < min_x or cell.x > max_x or cell.y < min_y or cell.y > max_y then
 			self.node_map[cell_id] = nil
 			self:free_cell(cell)
 		end
 	end
-
-	
-	
 	for y = min_y, max_y do
 		for x=min_x, max_x do
 			local cell_id = self:get_cell_id(x,y)
@@ -96,6 +100,33 @@ function Map:set_position(pos)
 			gui.set_position(cell.root_node, cell_pos)
 		end
 	end
+end
+
+function Map:update_cells()
+	for _, cell in pairs(self.node_map) do
+		local visible = WORLD.get_cell_save(cell.x,cell.y)
+		if visible then
+			local blocked = WORLD.is_blocked(cell.x, cell.y)
+			if blocked then
+				gui.set_color(cell.root_node, BLOCKED_COLOR)
+			else
+				gui.set_color(cell.root_node, EMPTY_COLOR)
+			end
+		else
+			gui.set_color(cell.root_node, UNKNOWN_COLOR)
+		end
+	end
+end
+
+function Map:update()
+	--use predefined fov
+	local zones = native_raycasting.raycast_visibility_fov(1.57, 180, 3);
+	--update zone cell visible move to world update
+	for _,zone in ipairs(zones) do
+		WORLD.map.CELLS[zone.y][zone.x].visible = true
+	end
+	self:update_cells()
+	self:set_position(WORLD.PLAYER.position)
 end
 
 

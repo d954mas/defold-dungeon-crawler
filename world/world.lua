@@ -11,31 +11,29 @@ M.map = nil
 M.PLAYER = PLAYER
 
 function M.is_blocked(x, y)
-	x = math.ceil(x)
-	y = math.ceil(y)
-	if x > 0 and x <= M.map.WIDTH and y>0 and y<= M.map.HEIGHT then
-		local cell = M.map.CELLS[y][x]
-		return cell.blocked
-	else
-		return true
-	end		
+	local cell = M.get_cell_save(x,y)
+	if cell then return cell.blocked else return true end
 end	
 
 function M.can_move(x, y)
-	x = math.ceil(x)
-	y = math.ceil(y)
-	if x > 0 and x <= M.map.WIDTH and y>0 and y<= M.map.HEIGHT then
-		local cell = M.map.CELLS[y][x]
+	local cell =M.get_cell_save(x,y)
 	--[[	for _, obj in pairs(DYNAMICS_OBJ.objs) do
 			if x == math.ceil(obj.sprite.position.x) and y == math.ceil(obj.sprite.position.y) then
 				return false
 			end		
 		end	--]]
-		return not cell.blocked
+	if cell then return not cell.blocked else return false end
+end
+
+function M.get_cell_save(x,y)
+	x = math.ceil(x)
+	y = math.ceil(y)
+	if x > 0 and x <= M.map.WIDTH and y>0 and y<= M.map.HEIGHT then
+		return M.map.CELLS[y][x]
 	else
-		return false
-	end		
-end	
+		return nil
+	end
+end
 
 function M.update(dt)
 	local move = vmath.vector3(-1,0,0)

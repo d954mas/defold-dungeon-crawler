@@ -4,6 +4,7 @@ local COMMON = require "libs.common"
 
 COMMON.LOG.set_appname("dungeon crawler")
 COMMON.LOG.toggle_print()
+COMMON.LOG.override_print()
 
 local scenes = {
     require "scenes.logo.logo_scene",
