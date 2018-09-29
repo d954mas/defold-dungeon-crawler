@@ -104,7 +104,7 @@ end
 
 function Map:update_cells()
 	for _, cell in pairs(self.node_map) do
-		local visible = WORLD.get_cell_save(cell.x,cell.y)
+		local visible = WORLD.get_cell_save(cell.x,cell.y).visible
 		if visible then
 			local blocked = WORLD.is_blocked(cell.x, cell.y)
 			if blocked then
