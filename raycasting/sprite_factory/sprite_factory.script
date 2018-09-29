@@ -134,6 +134,7 @@ local function unload_all()
 	for _, sprite_url in ipairs(SPRITE_URLS) do
 		free_sprite(SPRITE_URLS)
 	end
+	WORLD.DYNAMICS_OBJS.clear()
 	unload_free_sprites()
 end
 
@@ -163,25 +164,28 @@ local function rotate_player_angle_sprites()
 end
 
 local function update_dynamics()
-	--[[for k, obj in pairs(DYNAMIC_OBJS.objs) do
+	for k, obj in pairs(WORLD.DYNAMICS_OBJS.objs) do
 		if obj.need_delete then
-			if obj.sprite_url then unload_sprite(obj.sprite_url) end
-			DYNAMIC_OBJS.objs[k] = nil
+			if obj.sprite_url then free_sprite(obj.sprite_url) end
+			WORLD.DYNAMIC_OBJS.objs[k] = nil
 		else
-			local zone = getStaticZone(math.ceil(obj.sprite.position.x), math.ceil(obj.sprite.position.y))
+			local zone = get_zone_data(math.ceil(obj.sprite.position.x), math.ceil(obj.sprite.position.y))
 			if zone.existed then
 				if not obj.sprite_url then
 					local sprite_url = load_sprite(obj.sprite)
 					obj.sprite_url = sprite_url	
-					rotated_sprites[sprite_url] = true
-				end		
+					ROTATED_SPRITE[sprite_url] = true
+				end
 			elseif obj.sprite_url then
-				unload_sprite(obj.sprite_url)
+				free_sprite(obj.sprite_url)
 				obj.sprite_url = nil
 			end
 			
 			if obj.sprite_url then
-				go.set_position(obj.sprite.position, obj.sprite_url)
+				vector_tmp.x = obj.sprite.position.x
+				vector_tmp.y = obj.sprite.position.z
+				vector_tmp.z = -obj.sprite.position.y
+				go.set_position(vector_tmp,obj.sprite_url)
 			end		
 		end	
 	end	--]]
@@ -239,6 +243,7 @@ function update(self, dt)
 			load_sprites_from_table(zoneSprites.north, cell.north)
 		end
 	end
+	update_dynamics()
 	rotate_player_angle_sprites()
 	unload_free_sprites()
 

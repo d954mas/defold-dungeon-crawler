@@ -1,6 +1,8 @@
 local PLAYER = require "world.player"
 local WorldMc = require "world.world_mc"
 local LOG = require "libs.log"
+
+---@class World
 local M = {}
 
 M.EVENTS = {
@@ -9,6 +11,7 @@ M.EVENTS = {
 M.mc = WorldMc:new(M, M.EVENTS)
 M.map = nil
 M.PLAYER = PLAYER
+M.DYNAMICS_OBJS = require "world.dynamics_sprites"
 
 function M.is_blocked(x, y)
 	local cell = M.get_cell_save(x,y)
@@ -16,12 +19,14 @@ function M.is_blocked(x, y)
 end	
 
 function M.can_move(x, y)
+	x = math.ceil(x)
+	y = math.ceil(y)
 	local cell =M.get_cell_save(x,y)
-	--[[	for _, obj in pairs(DYNAMICS_OBJ.objs) do
+	for _, obj in pairs(M.DYNAMICS_OBJS.objs) do
 			if x == math.ceil(obj.sprite.position.x) and y == math.ceil(obj.sprite.position.y) then
 				return false
 			end		
-		end	--]]
+		end
 	if cell then return not cell.blocked else return false end
 end
 
@@ -37,9 +42,9 @@ end
 
 function M.update(dt)
 	local move = vmath.vector3(-1,0,0)
-	--for _,enemy in ipairs(DYNAMICS_OBJ.objs) do
+	for _,enemy in ipairs(M.DYNAMICS_OBJS.objs) do
 		--enemy.sprite.position = enemy.sprite.position + move * 0.5 * dt
---	end
+	end
 	if(PLAYER.action ~= nil) then
 		PLAYER.action:update(dt)
 	end	
