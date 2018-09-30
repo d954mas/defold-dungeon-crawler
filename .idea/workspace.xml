@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="080a989f-84e9-4d79-a922-2b2c24495676" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raycasting/sprite_factory/sprite_factory.script" beforeDir="false" afterPath="$PROJECT_DIR$/raycasting/sprite_factory/sprite_factory.script" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/game/game.collection" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/game/game.collection" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/world/dynamics_sprites.lua" beforeDir="false" afterPath="$PROJECT_DIR$/world/dynamics_sprites.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/world/world.lua" beforeDir="false" afterPath="$PROJECT_DIR$/world/world.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/world/world_mc.lua" beforeDir="false" afterPath="$PROJECT_DIR$/world/world_mc.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/game/gui/debug/debug_game_gui.gui" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/game/gui/debug/debug_game_gui.gui" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +37,7 @@
           <entry key="Image" value="2" />
           <entry key="PLAIN_TEXT" value="29" />
           <entry key="YAML" value="1" />
-          <entry key="lua" value="313" />
+          <entry key="lua" value="314" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -62,7 +57,7 @@
           <entry key="gui_script" value="18" />
           <entry key="h" value="1" />
           <entry key="input_binding" value="1" />
-          <entry key="lua" value="242" />
+          <entry key="lua" value="243" />
           <entry key="manifest" value="1" />
           <entry key="manifest_ignore" value="1" />
           <entry key="png" value="2" />
@@ -80,10 +75,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/world/world.lua">
+        <entry file="file://$PROJECT_DIR$/assets/maps/test_map.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+            <state relative-caret-position="293">
+              <caret line="95" column="33" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -177,8 +172,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-131" />
-    <option name="y" value="61" />
+    <option name="x" value="108" />
+    <option name="y" value="75" />
     <option name="width" value="1400" />
     <option name="height" value="973" />
   </component>
@@ -273,13 +268,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58956000" />
+    <option name="totallyTimeSpent" value="59003000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-131" y="61" width="1400" height="973" extended-state="0" />
+    <frame x="108" y="75" width="1400" height="973" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27232143" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27232143" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -297,7 +292,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="11" visible="true" weight="0.2932417" />
+      <window_info anchor="bottom" id="Version Control" order="11" visible="true" weight="0.2932417" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -572,13 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/maps/test_map.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scenes/game/game_scene.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -621,6 +609,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/maps/test_map.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="95" column="33" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
         </state>
       </provider>
     </entry>
