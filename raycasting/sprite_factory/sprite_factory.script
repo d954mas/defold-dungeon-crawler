@@ -134,7 +134,7 @@ local function unload_all()
 	for _, sprite_url in ipairs(SPRITE_URLS) do
 		free_sprite(SPRITE_URLS)
 	end
-	WORLD.DYNAMICS_OBJS.clear()
+	WORLD.DYNAMICS_OBJS:clear()
 	unload_free_sprites()
 end
 
@@ -160,7 +160,11 @@ local function rotate_player_angle_sprites()
 	local angle = vmath.quat_rotation_y(-PLAYER.angle)
 	for k, _ in pairs(ROTATED_SPRITE) do
 		go.set_rotation(angle, k)
-	end	
+	end
+
+	for k, v in pairs(WORLD.DYNAMICS_LBLS.objs) do
+		go.set_rotation(angle, v.sprite)
+	end
 end
 
 local function update_dynamics()

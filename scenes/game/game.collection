@@ -215,7 +215,7 @@ embedded_instances {
   }
 }
 embedded_instances {
-  id: "go"
+  id: "lbl_go"
   data: "embedded_components {\n"
   "  id: \"label\"\n"
   "  type: \"label\"\n"

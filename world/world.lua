@@ -1,7 +1,7 @@
 local PLAYER = require "world.player"
 local WorldMc = require "world.world_mc"
 local LOG = require "libs.log"
-
+local DYNAMIC_OBJS = require "world.dynamics_sprites"
 ---@class World
 local M = {}
 
@@ -11,7 +11,10 @@ M.EVENTS = {
 M.mc = WorldMc:new(M, M.EVENTS)
 M.map = nil
 M.PLAYER = PLAYER
-M.DYNAMICS_OBJS = require "world.dynamics_sprites"
+M.DYNAMICS_OBJS = DYNAMIC_OBJS()
+M.DYNAMICS_LBLS = DYNAMIC_OBJS()
+
+M.DYNAMICS_LBLS:add_dynamics(msg.url("game:/lbl_go"))
 
 function M.is_blocked(x, y)
 	local cell = M.get_cell_save(x,y)

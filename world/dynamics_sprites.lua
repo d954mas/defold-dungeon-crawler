@@ -1,24 +1,26 @@
-local M = {}
+local COMMON = require "libs.common"
+local M = COMMON.class("Dynamic_objects")
 
-M.objs = {}
-
-local id = 0
-
-function M.add_dynamics(sprite)
-	assert(sprite, "sprite can't be nil")
-	id = id + 1
-	M.objs[id] = {sprite_url = nil, sprite = sprite}
-	return id
-end	
-
-function M.delete(id)
-	assert(M.objs[id], "no obj with id:" .. id)
-	M.objs[id].need_delete = true
+function M:initialize()
+	self.objs = {}
+	self.id = 1
 end
 
-function M.clear()
-	M.objs = {}
-	id = 0
+function M:add_dynamics(sprite)
+	assert(sprite, "sprite can't be nil")
+	self.id = self.id + 1
+	self.objs[self.id] = {sprite_url = nil, sprite = sprite}
+	return self.id
+end	
+
+function M:delete(id)
+	assert(M.objs[id], "no obj with id:" .. id)
+	self.objs[id].need_delete = true
+end
+
+function M:clear()
+	self.objs = {}
+	self.id  = 0
 end	
 
 
